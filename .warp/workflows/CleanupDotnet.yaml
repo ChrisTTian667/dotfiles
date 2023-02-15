@@ -1,0 +1,10 @@
+---
+name: Clean Build Dotnet
+command: find . -name "bin" -type d -exec rm -rf {} + && find . -name "obj" -type d -exec rm -rf {} + && dotnet restore --force && dotnet build
+tags:
+  - dotnet
+description: "Remove all 'bin' and 'obj' folders below the current folder, restores the Nuget packages and builds the project"
+arguments: []
+author: Christian Daniel
+author_url: "https://github.com/ChrisTTian667"
+shells: []
