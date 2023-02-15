@@ -1,13 +1,16 @@
 [user]
 	email = christian.daniel@live.de
 	name = Chris
+
 [credential]
-	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
+
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+
 [alias]
 	kraken = !"/Applications/GitKraken.app/Contents/MacOS/GitKraken -p $(pwd)"
+
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
