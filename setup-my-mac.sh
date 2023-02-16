@@ -10,6 +10,7 @@ brew install powershell
 brew install nvm
 brew tap microsoft/git
 brew install pyenv
+brew install bitwarden-cli
 
 brew install --cask alt-tab
 brew install --cask bettertouchtool
