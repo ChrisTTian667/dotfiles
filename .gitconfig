@@ -10,7 +10,9 @@
 
 [alias]
 	kraken = !"/Applications/GitKraken.app/Contents/MacOS/GitKraken -p $(pwd)"
-
+	delete-merged-branches = "!f() { git fetch -p && git branch -vv | awk '/: gone]/{print $1}' | xargs git branch -d; }; f"
+	lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(green)%d%Creset %s %Cgreen(%cr) %C(red)<%an>%Creset' --abbrev-commit --date=relative
+	
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
