@@ -20,10 +20,10 @@ config config status.showUntrackedFiles no
 Then any file within the home folder can be versioned with normal commands like:
 ```bash
 config status
-config add .vimrc
-config commit -m "Add vimrc"
-config add .config/redshift.conf
-config commit -m "Add redshift config"
+config add .zsh
+config commit -m "Add zsh config"
+config add .config/starship.toml
+config commit -m "Add starship prompt config"
 config push
 ```
 No extra tooling, no symlinks, files are tracked on a version control system, you can use different branches for different computers, you can replicate you configuration easily on new installation.
