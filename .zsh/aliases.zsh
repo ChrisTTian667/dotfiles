@@ -6,6 +6,7 @@ alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}"
 alias os="open *.sln"
 alias x="exit"
 alias c="clear"
+alias o="open ."
 
 alias ..="cd .."
 alias ...="cd ../.."
