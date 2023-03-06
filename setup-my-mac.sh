@@ -12,6 +12,7 @@ brew tap microsoft/git
 brew install pyenv
 brew install bitwarden-cli
 
+
 brew install --cask alt-tab
 brew install --cask bettertouchtool
 
@@ -22,6 +23,7 @@ brew install --cask visual-studio-code
 brew install --cask insomnia
 brew install --cask git-credential-manager-core
 brew install --cask github
+brew install --cask wireshark
 
 brew install --cask slack
 brew install --cask microsoft-teams
