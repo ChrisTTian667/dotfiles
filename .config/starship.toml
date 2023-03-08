@@ -94,7 +94,7 @@ disabled = false
 
 # Shows kubernetes context and namespace
 [kubernetes]
-format = '[ﴱcontext\($namespace\)](bold purple) '
+format = '[ﴱ$context\($namespace\)](bold purple) '
 disabled = false
 
 # ---
