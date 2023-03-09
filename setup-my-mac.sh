@@ -11,7 +11,7 @@ brew install nvm
 brew tap microsoft/git
 brew install pyenv
 brew install bitwarden-cli
-
+brew install md5sha1sum
 
 brew install --cask alt-tab
 brew install --cask bettertouchtool
