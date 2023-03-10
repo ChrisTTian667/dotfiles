@@ -1,5 +1,6 @@
 brew install git
 brew install gh
+brew install gitversion
 
 brew install starship
 brew install exa
