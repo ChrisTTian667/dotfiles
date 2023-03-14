@@ -1,18 +1,10 @@
 [user]
 	email = christian.daniel@live.de
 	name = Chris
-
-[credential]
-	helper = /usr/local/share/gcm-core/git-credential-manager
-
-[credential "https://dev.azure.com"]
-	useHttpPath = true
-
 [alias]
 	prune-branches = "!f() { git fetch -p && git branch -vv | awk \"/(: entfernt]|: gone)/{print \\$1}\" | xargs git branch -d; }; f"
 	lg = log --graph --pretty=format:'%C(yellow)%h%Creset -%C(green)%d%Creset %s %Cgreen(%cr) %C(red)<%an>%Creset' --abbrev-commit --date=relative
 	kraken = !"/Applications/GitKraken.app/Contents/MacOS/GitKraken -p $(pwd)"
-	
 [filter "lfs"]
 	process = git-lfs filter-process
 	required = true
@@ -20,6 +12,10 @@
 	smudge = git-lfs smudge -- %f
 [core]
 	excludesfile = /Users/chris/.gitignore_global
-	
 [i18n]
 	logoutputencoding = utf-8
+[credential]
+	helper = 
+	helper = /usr/local/share/gcm-core/git-credential-manager
+[credential "https://dev.azure.com"]
+	useHttpPath = true
