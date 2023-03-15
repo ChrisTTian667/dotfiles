@@ -14,6 +14,7 @@ alias ....="cd ../../.."
 alias .....="cd ../../../.."
 
 # tools under development
+alias mr-release="dotnet /Users/chris/Source/mr-release/src/MrRelease/bin/Debug/net7.0/MrRelease.dll"
 alias mrs-pr="dotnet /Users/chris/Source/mrs-pullrequest/src/MrsPullRequest/bin/Debug/net7.0/MrsPullRequest.dll"
 
 # git alias for dotfiles repo
