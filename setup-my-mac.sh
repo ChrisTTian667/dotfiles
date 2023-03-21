@@ -20,8 +20,9 @@ brew install --cask bettertouchtool
 
 brew install --cask gitkraken
 brew install --cask docker
-brew install --cask rider
 brew install --cask visual-studio-code
+brew install --cask rider
+brew install --cask intellij-idea
 brew install --cask insomnia
 brew install --cask git-credential-manager-core
 brew install --cask github
