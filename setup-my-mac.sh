@@ -27,6 +27,7 @@ brew install --cask insomnia
 brew install --cask git-credential-manager-core
 brew install --cask github
 brew install --cask wireshark
+brew install --cask obsidian
 
 brew install --cask slack
 brew install --cask microsoft-teams
