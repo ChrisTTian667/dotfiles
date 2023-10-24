@@ -15,10 +15,10 @@
 	excludesfile = /Users/chris/.gitignore_global
 [i18n]
 	logoutputencoding = utf-8
+[init]
+	defaultBranch = "main"
 [credential]
 	helper = 
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
-[init]
-	defaultBranch = "main"
