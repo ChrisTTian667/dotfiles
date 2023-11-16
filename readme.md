@@ -55,6 +55,6 @@ alias config='/usr/bin/git --git-dir=$HOME/.myconf/ --work-tree=$HOME'
 ```
 and then proceed as before.
 
-## Referral
+## Referral Link
 
 If you're a macOS user like me, I highly recommend using [Warp Terminal](https://app.warp.dev/referral/8NG3R) instead of iTerm2 or the built-in terminal app. In my opinion, [Warp](https://app.warp.dev/referral/8NG3R), in combination with the stylish [Starship prompt](https://starship.rs/), offers an absolutely game-changing experience, especially when it comes to repetitive tasks and AI integration.
