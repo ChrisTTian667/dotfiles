@@ -58,4 +58,3 @@ and then proceed as before.
 ## Referral Link
 
 If you're a macOS user like me, I highly recommend trying out [Warp Terminal](https://app.warp.dev/referral/8NG3R) instead of iTerm2 or the built-in terminal app. In my opinion, [Warp](https://app.warp.dev/referral/8NG3R), paired with the sleek [Starship prompt](https://starship.rs/), provides a truly transformative experience, especially for repetitive tasks and AI integration. If you decide to give it a go, using my referral link would greatly support me on my journey to reaching 100 referrals and earning a free Warp Hoodie to become a more stylish developer. :) 
-
