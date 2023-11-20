@@ -15,6 +15,7 @@ brew install bitwarden-cli
 brew install md5sha1sum
 brew install jq glow
 brew install redis
+brew install ansible
 
 brew install --cask alt-tab
 brew install --cask bettertouchtool
