@@ -1,6 +1,7 @@
 [user]
-	email = christian.daniel@live.de
-	name = Chris
+	email = chris@th3chris.com
+	name = chris
+	signingKey = ""
 [alias]
 	branches = branch --format='%(HEAD) %(color:yellow)%(refname:short)%(color:reset) - %(contents:subject) %(color:green)(%(committerdate:relative)) [%(authorname)]' --sort=-committerdate
 	prune-branches = "!f() { git fetch -p && git branch -vv | awk \"/(: entfernt]|: gone)/{print \\$1}\" | xargs git branch -d; }; f"
@@ -22,3 +23,13 @@
 	helper = /usr/local/share/gcm-core/git-credential-manager
 [credential "https://dev.azure.com"]
 	useHttpPath = true
+[gpg]
+	format = openpgp
+	program = gpg
+[commit]
+	gpgSign = false
+[tag]
+	forceSignAnnotated = false
+[gpg "ssh"]
+	program = ssh-keygen
+	allowedSignersFile = ""
