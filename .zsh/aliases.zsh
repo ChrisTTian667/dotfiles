@@ -8,6 +8,8 @@ alias x="exit"
 alias c="clear"
 alias o="open ."
 alias ap="ansible-playbook"
+alias k="kubectl"
+alias ka="kubectl apply -f"
 
 alias update='softwareupdate -l'
 alias brewup='brew update && brew upgrade && brew cleanup'
