@@ -1,0 +1,76 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: iobroker-deployment
+  namespace: homeautomation
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: iobroker
+  template:
+    metadata:
+      labels:
+        app: iobroker
+    spec:
+      containers:
+      - name: iobroker
+        image: buanet/iobroker
+        ports:
+        - containerPort: 8081
+        volumeMounts:
+        - mountPath: /dev/ttyACM0
+          name: usb-device
+        - mountPath: /opt/iobroker
+          name: nfs-storage
+        resources:
+          limits:
+            cpu: "0.5"
+            memory: "2048Mi"
+          requests:
+            cpu: "0.1"
+            memory: "512Mi"
+        securityContext:
+          capabilities:
+            add:
+            - SYS_ADMIN
+            - DAC_READ_SEARCH
+      volumes:
+      - name: usb-device
+        hostPath:
+          path: /dev/ttyACM0
+          type: CharDevice
+      - name: nfs-storage
+        persistentVolumeClaim:
+          claimName: iobroker-pvc
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: iobroker-service
+  namespace: homeautomation
+spec:
+  selector:
+    app: iobroker
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8081
+  type: LoadBalancer
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: iobroker-ingressroute
+  namespace: homeautomation
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`iobroker.lan`)
+      kind: Rule
+      services:
+        - name: iobroker-service
+          port: 80

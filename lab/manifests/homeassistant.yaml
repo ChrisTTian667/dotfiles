@@ -1,0 +1,88 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: homeautomation
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: homeassistant
+  name: homeassistant
+  namespace: homeautomation
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: homeassistant
+  template:
+    metadata:
+      labels:
+        app: homeassistant
+    spec:
+      hostNetwork: true
+      volumes:
+        - name: ha-storage
+          nfs:
+            server: nas.lan
+            path: "/volume1/homeassistant"
+        - name: usb-device-p
+          hostPath:
+            path: /dev/ttyUSB0
+        - name: usb-device-e
+          hostPath:
+            path: /dev/ttyACM0
+      containers:
+        - image: homeassistant/home-assistant:2023.12
+          name: home-assistant
+          volumeMounts:
+            - mountPath: "/config"
+              name: ha-storage
+            - mountPath: /dev/ttyUSB0
+              name: usb-device-p
+            - mountPath: /dev/ttyACM0
+              name: usb-device-e
+          resources:
+            limits:
+              cpu: "0.5"
+              memory: "2048Mi"
+            requests:
+              cpu: "0.1"
+              memory: "512Mi"
+          securityContext:
+            privileged: true
+            capabilities:
+              add:
+                - SYS_ADMIN
+                - DAC_READ_SEARCH
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: homeassistant
+  namespace: homeautomation
+spec:
+  selector:
+    app: homeassistant
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 8123
+  type: LoadBalancer
+
+---
+apiVersion: traefik.containo.us/v1alpha1
+kind: IngressRoute
+metadata:
+  name: homeassistant-ingressroute
+  namespace: homeautomation
+spec:
+  entryPoints:
+    - web
+  routes:
+    - match: Host(`homeassistant.lan`)
+      kind: Rule
+      services:
+        - name: homeassistant
+          port: 80

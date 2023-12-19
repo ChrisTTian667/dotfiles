@@ -1,0 +1,5 @@
+- name: Ping
+  hosts: ubuntu_servers
+  tasks:
+    - name: Ping Servers
+      ping: 

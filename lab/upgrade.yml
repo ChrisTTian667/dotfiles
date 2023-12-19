@@ -1,0 +1,17 @@
+- name: Update and Upgrade
+  hosts: ubuntu_servers
+  become: yes 
+  become_user: chris
+
+  environment:
+    DEBIAN_FRONTEND: noninteractive
+
+  tasks:
+    - name: Update APT repositories
+      apt:
+        update_cache: yes
+
+    - name: Upgrade packages
+      apt:
+        upgrade: yes
+        dpkg_options: 'force-confold'

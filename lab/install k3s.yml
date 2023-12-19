@@ -1,0 +1,20 @@
+---
+- name: Install k3s Cluster
+  hosts: ubuntu_servers
+  become: yes
+
+  tasks:
+    - name: Install acl package (provides setfacl)
+      become: yes
+      apt:
+        name: acl
+        state: present
+
+    - name: Install nfs-common for NFS support
+      become: yes
+      apt:
+        name: nfs-common
+        state: present
+
+    - name: Install k3s
+      shell: curl -sfL https://get.k3s.io | sh -
