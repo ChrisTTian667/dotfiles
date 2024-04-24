@@ -16,6 +16,7 @@ brew install md5sha1sum
 brew install jq glow
 brew install redis
 brew install ansible
+brew install difftastic
 
 brew install --cask alt-tab
 brew install --cask bettertouchtool
@@ -25,7 +26,7 @@ brew install --cask docker
 brew install --cask visual-studio-code
 brew install --cask rider
 brew install --cask intellij-idea
-brew install --cask insomnia
+brew install --cask insomnium
 brew install --cask git-credential-manager-core
 brew install --cask github
 brew install --cask wireshark
