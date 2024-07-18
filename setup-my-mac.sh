@@ -3,7 +3,7 @@ brew install gh
 brew install gitversion
 
 brew install starship
-brew install exa
+brew install lsd
 brew install z
 brew install wget
 brew install az

@@ -1,6 +1,6 @@
 alias ip="ifconfig | grep inet"
-alias ls="exa --icons --git --group-directories-first -a"
-alias ll="exa --icons --git --group-directories-first -la"
+alias ls="lsd -a --group-directories-first"
+alias ll="lsd -la --group-directories-first --blocks 'permission,user,group,size,name,git'"
 alias g="goto"
 alias grep="grep --color=auto --exclude-dir={.bzr,CVS,.git,.hg,.svn}"
 alias os="open *.sln"
