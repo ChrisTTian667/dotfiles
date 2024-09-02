@@ -17,6 +17,7 @@ brew install jq glow
 brew install redis
 brew install ansible
 brew install difftastic
+brew install ncdu
 
 brew install --cask alt-tab
 brew install --cask bettertouchtool
