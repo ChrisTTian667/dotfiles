@@ -1,11 +1,12 @@
 [[ -f ~/.zsh/aliases.zsh ]] && source ~/.zsh/aliases.zsh
 [[ -f ~/.zsh/starship.zsh ]] && source ~/.zsh/starship.zsh
 [[ -f ~/.zsh/chatgpt.zsh ]] && source ~/.zsh/chatgpt.zsh
-[[ -f ~/.zsh/adva-cli.zsh ]] && source ~/.zsh/adva-cli.zsh
 
 autoload -Uz compinit
 compinit
 
+export MSBUILDTERMINALLOGGER=auto
+export DOTNET_CLI_UI_LANGUAGE=en-US
 export USERPROFILE=$HOME
 
 export NVM_DIR="$HOME/.nvm"
