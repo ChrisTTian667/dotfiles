@@ -5,9 +5,10 @@
 autoload -Uz compinit
 compinit
 
-export MSBUILDTERMINALLOGGER=auto
-export DOTNET_CLI_UI_LANGUAGE=en-US
 export USERPROFILE=$HOME
+export MSBUILDTERMINALLOGGER=auto        # enable fancy dotnet terminal logging
+export DOTNET_CLI_UI_LANGUAGE=en-US
+export BAT_PAGING=never                  # Prevents bat from paging
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
