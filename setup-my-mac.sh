@@ -5,6 +5,7 @@ brew install gitversion
 brew install starship
 brew install lsd
 brew install z
+brew install fzf
 brew install wget
 brew install az
 brew install powershell
@@ -18,6 +19,8 @@ brew install redis
 brew install ansible
 brew install difftastic
 brew install ncdu
+brew install tldr
+brew install thefuck
 
 brew install --cask alt-tab
 brew install --cask bettertouchtool
