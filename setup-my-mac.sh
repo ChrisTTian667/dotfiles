@@ -21,6 +21,8 @@ brew install difftastic
 brew install ncdu
 brew install tldr
 brew install thefuck
+brew install lazygit
+brew install lazydocker
 
 brew install --cask alt-tab
 brew install --cask bettertouchtool
